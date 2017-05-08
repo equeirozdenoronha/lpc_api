@@ -75,14 +75,13 @@ class Inscricoes(models.Model):
     evento = models.ForeignKey('Evento')
     dataEHoraDaInscricao = models.DateTimeField('dataEHoraDaInscricao', default=timezone.now)
     tipoInscricao = models.ForeignKey('TipoInscricao')
-
+    
     def __str__(self):
         return '{}'.format(self.pessoa)
 
 
 class TipoInscricao(models.Model):
     descricao = models.CharField('descricao', max_length=200)
-
     def __str__(self):
         return '{}'.format(self.descricao)
 
